@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SentinelAI - Enterprise On-Device Threat Shield</title>
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --accent: #10b981;
+      --accent-glow: rgba(16, 185, 129, 0.4);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --danger: #ef4444;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      background-image: radial-gradient(circle at top right, rgba(16, 185, 129, 0.1), transparent 400px);
+    }
+    header {
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .logo {
+      font-size: 42px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: 10px;
+    }
+    .logo span { color: var(--accent); }
+    .tagline {
+      font-size: 20px;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+    }
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .btn-download {
+      display: inline-block;
+      background: var(--accent);
+      color: #000;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 16px 32px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px var(--accent-glow);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .btn-download:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px var(--accent-glow);
+      background: #059669;
+      color: white;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .feature-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 24px;
+      border-radius: 12px;
+      width: 300px;
+      text-align: left;
+    }
+    .feature-card h3 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+    .install-guide {
+      max-width: 800px;
+      margin: 60px auto;
+      background: rgba(0,0,0,0.4);
+      padding: 40px;
+      border-radius: 16px;
+      border: 1px dashed rgba(255,255,255,0.2);
+    }
+    .install-guide h2 {
+      text-align: center;
+      color: #fcd34d;
+      margin-top: 0;
+    }
+    .step {
+      display: flex;
+      margin-bottom: 20px;
+      align-items: flex-start;
+    }
+    .step-num {
+      background: var(--accent);
+      color: #000;
+      font-weight: bold;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-right: 15px;
+      margin-top: 2px;
+    }
+    .code-box {
+      background: #000;
+      color: #10b981;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-family: monospace;
+      display: inline-block;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Sentinel<span>AI</span></div>
+    <div class="tagline">The world's first 100% On-Device Threat Shield. Zero Cloud. Zero Latency.</div>
+  </header>
+
+  <div class="hero">
+    <h1 style="font-size: 48px; margin-bottom: 20px;">Stop Hackers Before They Strike.</h1>
+    <p style="font-size: 18px; color: var(--text-muted); max-width: 700px; margin: 0 auto 40px auto;">
+      SentinelAI intercepts zero-day phishing sites, invisible clickjacking traps, and deep-web homoglyph spoofs purely mathematically—directly inside your browser memory.
+    </p>
+    <a href="../SentinelAI_Mobile_Extension.zip" download class="btn-download">⬇️ Download Extension for Chrome</a>
+    <p style="margin-top: 15px; font-size: 13px; color: var(--text-muted);">Version 2.0 • Requires Google Chrome or Kiwi Browser (Android)</p>
+  </div>
+
+  <div class="features">
+    <div class="feature-card">
+      <h3>☁️ Zero-Cloud Privacy</h3>
+      <p>Your data never leaves your device. SentinelAI runs entirely offline using local JavaScript service workers, guaranteeing zero data leakage.</p>
+    </div>
+    <div class="feature-card">
+      <h3>💥 Active Defense</h3>
+      <p>Don't just block scammers—fight back. SentinelAI can actively flood hacker databases with 10,000 mathematically valid fake credentials to destroy their stolen data.</p>
+    </div>
+    <div class="feature-card">
+      <h3>👁️ Behavioral Guardian</h3>
+      <p>Mathematically detects invisible clickjacking layers, freezes panic-inducing countdown timers, and intercepts malicious push-notification CAPTCHAs.</p>
+    </div>
+  </div>
+
+  <div class="install-guide">
+    <h2>🛠️ How to Install in Google Chrome</h2>
+    <p style="text-align: center; margin-bottom: 30px; color: var(--text-muted);">Since this is an exclusive Hackathon build, it is not on the Chrome Web Store yet. Follow these 4 easy steps to install the developer version:</p>
+    
+    <div class="step">
+      <div class="step-num">1</div>
+      <div>
+        <strong>Download & Extract</strong><br>
+        Click the download button above to get the <span class="code-box">SentinelAI_Mobile_Extension.zip</span> file. Right-click the downloaded file and select <b>"Extract All..."</b>.
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div>
+        <strong>Open Chrome Extensions</strong><br>
+        Open Google Chrome, type <span class="code-box">chrome://extensions/</span> into your URL bar, and press Enter.
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div>
+        <strong>Enable Developer Mode</strong><br>
+        In the top-right corner of the Extensions page, turn on the toggle switch for <b>"Developer mode"</b>.
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div>
+        <strong>Load the Extension</strong><br>
+        Click the <b>"Load unpacked"</b> button in the top-left corner. Select the folder you extracted in Step 1. SentinelAI is now actively protecting you!
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

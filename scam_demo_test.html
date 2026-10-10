@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Malicious Scam Simulation Page</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 40px; background-color: #f87171; color: white; }
+    .demo-box { background: white; color: black; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    h2 { margin-top: 0; color: #b91c1c; }
+    
+    /* CLICKJACKING SCAM CSS */
+    .innocent-button {
+      padding: 15px 30px; font-size: 18px; background: #3b82f6; color: white; border: none; border-radius: 5px; cursor: pointer;
+    }
+    .invisible-evil-button {
+      position: absolute; opacity: 0.01; z-index: 99999;
+      width: 200px; height: 50px; cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>💀 SentinelAI Hackathon Live Demo Ground</h1>
+  <p>This page contains 5 hidden psychological manipulation attacks. SentinelAI should automatically neutralize them!</p>
+
+  <!-- 1. INVISIBLE CLICKJACKING DETECTOR -->
+  <div class="demo-box">
+    <h2>1. The Clickjacking Trap</h2>
+    <p>Try to click the innocent "Play Video" button. Hackers have layered an invisible "Transfer Funds" button right on top of it!</p>
+    <div style="position: relative;">
+      <button class="invisible-evil-button" onclick="alert('YOU WERE HACKED! You just transferred $5,000 to the scammer!')">Transfer Funds (Invisible)</button>
+      <button class="innocent-button">▶ Play Funny Cat Video</button>
+    </div>
+  </div>
+
+  <!-- 2. ARTIFICIAL URGENCY NEUTRALIZER -->
+  <div class="demo-box">
+    <h2>2. Artificial Urgency Timer</h2>
+    <p>This timer uses JavaScript to induce panic. SentinelAI should mathematically freeze it.</p>
+    <div id="scam-timer" style="font-size: 24px; font-weight: bold; color: #ef4444;">
+      Offer Expires in <span id="time-left">04:59</span>!
+    </div>
+    <script>
+      let seconds = 299;
+      setInterval(() => {
+        seconds--;
+        const m = String(Math.floor(seconds / 60)).padStart(2, '0');
+        const s = String(seconds % 60).padStart(2, '0');
+        document.getElementById('time-left').innerText = `${m}:${s}`;
+      }, 100); // Ticking very fast to simulate urgency!
+    </script>
+  </div>
+
+  <!-- 3. FAKE CAPTCHA GUARDIAN -->
+  <div class="demo-box">
+    <h2>3. Fake CAPTCHA (Push Notification Scam)</h2>
+    <p>This text tricks users into clicking "Allow" on the browser popup.</p>
+    <div style="font-size: 20px; font-weight: bold;">
+      Loading Video... Click Allow to verify you are human.
+    </div>
+  </div>
+
+  <!-- 4. DOUBLE EXTENSION SENTRY -->
+  <div class="demo-box">
+    <h2>4. Malware Download Link</h2>
+    <p>This looks like a PDF, but it's actually an executable file.</p>
+    <a href="http://example.com/invoice.pdf.exe" style="font-size: 18px; font-weight: bold; color: blue; text-decoration: underline;">
+      📄 Download your receipt (Invoice.pdf)
+    </a>
+  </div>
+
+  <!-- 5. MOUSE TRACKING KEYLOGGER -->
+  <div class="demo-box">
+    <h2>5. Invasive Spyware Script</h2>
+    <p>This page tries to bind 10 mouse-tracking listeners to steal your behavioral data.</p>
+    <script>
+      // Simulate aggressive spyware behavior
+      for(let i=0; i<10; i++) {
+        document.addEventListener('mousemove', () => { /* tracking mouse */ });
+      }
+    </script>
+  </div>
+
+</body>
+</html>
